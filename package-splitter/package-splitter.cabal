@@ -1,0 +1,25 @@
+name:                package-splitter
+version:             0.1.0.0
+synopsis:            Given a package, tries to find all modules that can be published separatelly for it and generates packages containing them.
+-- description:         
+homepage:            https://github.com/haskellbr/package-splitter
+license:             MIT
+license-file:        LICENSE
+author:              Pedro Tacla Yamada
+maintainer:          tacla.yamada@gmail.com
+copyright:           Copyright (c) 2015 Pedro Tacla Yamada
+category:            Distribution
+build-type:          Simple
+cabal-version:       >=1.10
+
+executable package-splitter
+  main-is:             Main.hs
+  build-depends:       Cabal
+                     , MissingH
+                     , base >=4.8 && <4.9
+                     , directory
+                     , file-modules >= 0.1.2 && < 0.2
+                     , filepath
+                     , optparse-applicative
+  hs-source-dirs:      src
+  default-language:    Haskell2010
